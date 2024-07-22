@@ -1,1 +1,2 @@
 Compiler Design is complex and fasinating field in computer science,involving creation of programs that transalate code written in one programming language into another language.
+Functionality: Design and implement a basic compiler for a custom programming language. Develop modules for lexical analysis, syntax parsing, semantic analysis, code generation, and optimization. The compiler should be capable of translating source code into executable machine code.
