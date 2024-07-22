@@ -1,0 +1,10 @@
+//compile the lexer and parser
+flex lexer.l
+bison -d parser.y
+
+//Compile the generated code with cpp
+  g++ lex.yy.c parser.tab.c -o simple_compiler
+
+//Run the compiler
+./simple_compiler
+
