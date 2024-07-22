@@ -1,0 +1,20 @@
+%{
+#include "parser.tab.h"
+#include <stdio.h>
+%}
+
+%%
+
+[0-9]+         { yylval.ival = atoi(yytext); return NUMBER; }
+"+"            { return PLUS; }
+"-"            { return MINUS; }
+"*"            { return TIMES; }
+"/"            { return DIVIDE; }
+[ \t\n]        { /* Ignore whitespace */ }
+.              { return yytext[0]; }
+
+%%
+
+int yywrap() {
+    return 1;
+}
